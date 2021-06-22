@@ -1,6 +1,6 @@
 <?php
 
-namespace SIGEVframework\DataMapper\Exception;
+namespace SIGEVframework\LiquidORM\DataMapper\Exception;
 
 use InvalidArgumentException;
 

@@ -1,12 +1,12 @@
 <?php
 
-namespace SIGEVframework\DataMapper;
+namespace SIGEVframework\LiquidORM\DataMapper;
 
 use PDO;
 use Throwable;
 use PDOStatement;
 use SIGEVframework\ConexaoBanco\DatabaseConnectionInterface;
-use SIGEVframework\DataMapper\Exception\DataMapperException;
+use SIGEVframework\LiquidORM\DataMapper\Exception\DataMapperException;
 use SIGEVframework\LiquidORM\DataMapper\DataMapperInterface;
 
 class DataMapper implements DataMapperInterface

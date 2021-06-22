@@ -1,8 +1,8 @@
 <?php
 
-namespace SIGEVframework\DataMapper;
+namespace SIGEVframework\LiquidORM\DataMapper;
 
-use SIGEVframework\DataMapper\Exception\DataMapperInvalidArgumentException;
+use SIGEVframework\LiquidORM\DataMapper\Exception\DataMapperInvalidArgumentException;
 /**
  * Pensei em utilizar .env nesta classe, mas está
  * muito atrelada à configuração, não às variáveis de ambiente...
