@@ -1,0 +1,22 @@
+{
+    "name": "brand/framework",
+    "require": {
+        "php": "7.4.2|^8.0",
+        "ext-mbstring": "*",
+        "ext-iconv": "*",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-simplexml": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "SIGEVframework\\": "src/SIGEVframework"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SIGEVframework\\Testes\\": "testes/"
+        }
+    }
+}
