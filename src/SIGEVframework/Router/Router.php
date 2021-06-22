@@ -42,13 +42,13 @@ class Router implements RouterInterface
         //TO-DO: acho melhor o lançamento de exceções primeiro, fica menos bagunçado
         if ($this->match($url)) {
             $controllerString = $this->params['controller'];
-            $controllerString = $this->transformUpperCamelCase($controllerString);
+            $controllerString = $this->transformClassPattern($controllerString);
             $controllerString = $this->getNamespace($controllerString);
 
             if (class_exists($controllerString)) {
                 $controller = new $controllerString();
                 $action = $this->params['action'];
-                $action = $this->transformCamelCase($action);
+                $action = $this->transformMethodPattern($action);
 
                 //TO-DO: ver como frameworks lidam com essas exceções
                 if (\is_callable([$controller, $action])) {

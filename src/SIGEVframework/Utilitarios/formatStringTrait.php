@@ -10,7 +10,7 @@ trait formatStringTrait
      * @param string $string
      * @return string
      */
-    public function transformUpperCamelCase(string $string): string
+    public function transformClassPattern(string $string): string
     {
         return str_replace(' ', '', ucwords(str_replace('-', ' ', $string)));
     }
@@ -21,8 +21,8 @@ trait formatStringTrait
      * @param string $string
      * @return string
      */
-    public function transformCamelCase(string $string): string 
+    public function transformMethodPattern(string $string): string 
     {
-        return \lcfirst($this->transformUpperCamelCase($string));
+        return \lcfirst($this->transformClassPattern($string));
     }
 }

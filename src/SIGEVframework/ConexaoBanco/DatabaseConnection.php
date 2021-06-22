@@ -24,7 +24,7 @@ class DatabaseConnection implements DatabaseConnectionInterface
      * 
      * @return void
      */
-    public function __constructor(array $credentials)
+    public function __construct(array $credentials)
     {
         $this->credentials = $credentials;
     }
@@ -50,6 +50,7 @@ class DatabaseConnection implements DatabaseConnectionInterface
         } catch(PDOException $exception) {
             throw new DatabaseConnectionException($exception->getMessage(), (int)$exception->getCode());
         }
+        return $this->databasePDO;
     }
 
     /**
