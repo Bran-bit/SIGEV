@@ -2,7 +2,8 @@
 
 namespace SIGEVframework\Router;
 
-use Exception;
+use SIGEVframework\Router\Exception\RouterBadMethodCallException;
+use SIGEVframework\Router\Exception\RouterException;
 use SIGEVframework\Router\RouterInterface;
 
 class Router implements RouterInterface
@@ -54,14 +55,14 @@ class Router implements RouterInterface
                 if (\is_callable([$controller, $action])) {
                     $controller->action();
                 } else {
-                    throw new Exception();
+                    throw new RouterBadMethodCallException();
                 }
                 //Se a classe não existe
             } else {
-                throw new Exception();
+                throw new RouterException();
             }
         } else {
-            throw new Exception();
+            throw new RouterException();
         }
 
         

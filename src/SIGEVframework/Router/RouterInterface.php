@@ -11,7 +11,7 @@ interface RouterInterface
      * @param array $params
      * @return void
      */
-    public function add(string $router, array $params) : void;
+    public function add(string $router, array $params = []) : void;
 
     /**
      * A partir da URL, despacha a rota e chama o controlador
