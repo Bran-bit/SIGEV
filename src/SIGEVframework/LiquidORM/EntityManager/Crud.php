@@ -141,6 +141,9 @@ class Crud implements CrudInterface
         }
     }
 
+     /**
+     * @inheritDoc
+     */
     public function search(array $selectors = [], array $conditions = []): array
     {
         try {
@@ -160,6 +163,9 @@ class Crud implements CrudInterface
         }
     }
 
+     /**
+     * @inheritDoc
+     */
     public function pureSqlQuery(string $query, array $conditions = [])
     {
         try {
@@ -172,7 +178,7 @@ class Crud implements CrudInterface
             $query = $this->queryBuilder->buildQuery($args)->pureSqlQuery();
             $this->dataMapper->persist($query, $this->dataMapper->buildQueryParameters($conditions));
             if($this->dataMapper->numRows()) {
-                
+                 
             }
         } catch (Throwable $throwable) {
             throw $throwable;
